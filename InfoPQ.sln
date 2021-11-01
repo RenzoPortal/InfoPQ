@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfoPQ", "InfoPQ.csproj", "{2DC1B285-C21F-4DC6-A175-68293DAD6E53}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2DC1B285-C21F-4DC6-A175-68293DAD6E53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DC1B285-C21F-4DC6-A175-68293DAD6E53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DC1B285-C21F-4DC6-A175-68293DAD6E53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DC1B285-C21F-4DC6-A175-68293DAD6E53}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {24132731-ADFE-432F-A015-FC65D996E8E6}
+	EndGlobalSection
+EndGlobal

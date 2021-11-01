@@ -1,0 +1,70 @@
+﻿@model InfoPQ.Models.Persona
+@{
+    ViewData["Title"] = "Home Page";
+}
+@using (Html.BeginForm())
+{
+
+    <br />
+    <div class="cotainer py-3">
+        <div class="row justify-content-center py-3">
+            <div class="col-md-8">
+                <div class="card border border-primary">
+                    <div class="card-header bg-info">
+                        <h1 class="text-center text-white font-weight-bold">Consulta tus datos</h1>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group row">
+                                <label for="dni" class="col-md-4 col-form-label text-md-right">Ingrese su DNI</label>
+                                <div class="col-md-6">
+                                    @Html.EditorFor(model => model.DNI, new { htmlAttributes = new { @class = "form-control", @maxlength = "8" } })
+                                    <div class="valid-feedback">Bien</div>
+                                    <div class="invalid-feedback">Completar campo !!.</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 offset-md-4">
+                                <input type="submit" value="Buscar" class="col-sm-5 btn btn-info" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cotainer py-3">
+        <div class="row justify-content-center py-3">
+            <div class="col-md-8">
+                <h4>Información</h4>
+                <hr style="border-top: 1px solid dodgerblue; " />
+                <dl class="row">
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.Nombre)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(modelItem => modelItem.Nombre)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.Apellido)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(modelItem => modelItem.Apellido)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.DNI)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(modelItem => modelItem.DNI)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.Sexo)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(modelItem => modelItem.Sexo)
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+
+}
