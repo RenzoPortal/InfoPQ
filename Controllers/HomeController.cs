@@ -29,6 +29,17 @@ namespace InfoPQ.Controllers
             Persona info = conn.ConsultaDNI(dni);
             return View(info);
         }
+        public IActionResult Create()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Create(string nombre, string apellido, string dni, string sexo)
+        {
+            Data.Connection conn = new Data.Connection();
+            Persona registrar = conn.Registrarse(nombre, apellido, dni, sexo);
+            return Redirect("Index");
+        }
         public IActionResult Privacy()
         {
             return View();

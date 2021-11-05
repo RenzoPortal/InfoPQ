@@ -18,9 +18,7 @@
                             <div class="form-group row">
                                 <label for="dni" class="col-md-4 col-form-label text-md-right">Ingrese su DNI</label>
                                 <div class="col-md-6">
-                                    @Html.EditorFor(model => model.DNI, new { htmlAttributes = new { @class = "form-control", @maxlength = "8" } })
-                                    <div class="valid-feedback">Bien</div>
-                                    <div class="invalid-feedback">Completar campo !!.</div>
+                                    <input asp-for="DNI" class="form-control" placeholder="Ingrese sus Nombres" maxlength="8"/>
                                 </div>
                             </div>
                             <div class="col-md-6 offset-md-4">
@@ -35,7 +33,12 @@
     <div class="cotainer py-3">
         <div class="row justify-content-center py-3">
             <div class="col-md-8">
-                <h4>Información</h4>
+                <p class="lead float-left font-weight-bold">
+                    Datos de la persona:
+                </p>
+                <p class="text-right">
+                    <a class="btn btn-success" asp-action="Create">Registrate</a>
+                </p>
                 <hr style="border-top: 1px solid dodgerblue; " />
                 <dl class="row">
                     <dt class="col-sm-2">

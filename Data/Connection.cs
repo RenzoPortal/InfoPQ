@@ -36,7 +36,19 @@ namespace InfoPQ.Data
                 info.Nombre = "No se encontro";
                 info.Apellido = "";
             }
+            conn.Close();
             return info;
+        }
+        public Persona Registrarse(string nombre, string apellido, string dni, string sexo)
+        {
+            Persona registrar = new Persona();
+            conn = new SqlConnection("Server=tcp:consultadnidbserver.database.windows.net,1433;Initial Catalog=InfoPQ_db;Persist Security Info=False;User ID=RenzoPortal;Password=Consuldni@1357;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+            string guardar = "insert into Persona (Nombre, Apellido, DNI, Sexo) values ('"+nombre+"', '"+apellido+"', '"+dni+"', '"+sexo+"')";
+            comando = new SqlCommand(guardar, conn);
+            conn.Open();
+            comando.ExecuteNonQuery();
+            conn.Close();
+            return registrar;
         }
     }
 }
