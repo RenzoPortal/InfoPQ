@@ -23,21 +23,21 @@ namespace InfoPQ.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Index(string dni)
+        public async Task<IActionResult> Index(string dni)
         {
             Data.Connection conn = new Data.Connection();
-            Persona info = conn.ConsultaDNI(dni);
-            return View(info);
+            Task<Persona> info = conn.GetPerson(dni);
+            return View(await info);
         }
         public IActionResult Create()
         {
             return View();
         }
         [HttpPost]
-        public ActionResult Create(string nombre, string apellido, string dni, string sexo)
+        public async Task<IActionResult> Create(string nombre, string apellido, string dni)
         {
             Data.Connection conn = new Data.Connection();
-            Persona registrar = conn.Registrarse(nombre, apellido, dni, sexo);
+            await conn.CrearPersona(nombre, apellido, dni);
             return Redirect("Index");
         }
         public IActionResult Privacy()
